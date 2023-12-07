@@ -3,25 +3,21 @@
 
 class Card {// Card class is to create the playing cards for each player
     constructor(suit, rank, values) {
-        this.cards = suit + rank + values;// this array holds the cards created in the Deck class
+        this.cards = [suit, rank, values];// this array holds the cards created in the Deck class
     }
 }
+
+const suits = suits['Hearts', 'Clubs', 'Diamonds', 'Spades'];
+const ranks = ranks['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
+const values = values[1,2,3,4,5,6,7,8,9,10,11,12,13];
 
 class Deck { // includes constructor to create each card and pushes the cards to the this._cards array
 constructor() {
     this.cards = [];
 }
 
-
-getCards() {}//NOTE - ???
-
-buildDeck() {
-    let Deck = new Array();
-
 populate() { //defines suits, ranks, and values
-    const suits = suits['Hearts', 'Clubs', 'Diamonds', 'Spades'];
-    const ranks = ranks['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
-    const values = values[1,2,3,4,5,6,7,8,9,10,11,12,13];
+    
 // need two loops to lppo through all of the the suits and another to loop go through each of the ranks and values of the cards.
     for(let i = 0; i < suits.length; i++) { //first loop goes through the suits
         for(let j = 0; j < ranks.lenght && j < values.length; j++) { //inner loop starts with ranks and goes  through values
@@ -33,31 +29,31 @@ populate() { //defines suits, ranks, and values
     return Deck;
 }
 }
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+class Player {
+    constructor(name, cards, score) {
+        this.name = Player[];
+        this.cards = cards[];
+        this.score = score == 0;
+    }
+}
+
+class GameMaster {
+Player = Player[];
+Deck = this.cards;
+
+}
+
+getCards() {}//NOTE - ???
+
+
 
 shuffle(Deck) { // randomizes all of the elements of the this._cards array
 let m = Deck[];
 m = cards.sort(() => Math.random() - 0.5);
 
 }
-}
-
-class Player {
-    constructor(name, cards, score) {
-        this.name = name =Player[];
-        this.cards = cards[];
-        this.score = score == 0;
-    }
-
-
-}
-
-
-
-
-class GameMaster {
-Player = Player[];
-Deck = this.cards;
-
 }
 
 
